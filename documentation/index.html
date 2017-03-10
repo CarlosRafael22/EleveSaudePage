@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Documentation for Campfire Landing Page by Lumberjacks</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="files/favicon.png">
+
+  <script>
+    var browser=navigator.userAgent;var browserRegex=/(Android|BlackBerry|IEMobile|Nokia|iP(ad|hone|od)|Opera M(obi|ini))/;var isMobile=false;if(browser.match(browserRegex)){isMobile=true;addEventListener("load",function(){setTimeout(hideURLbar,0);},false);function hideURLbar(){window.scrollTo(0,1);}}
+  </script>
+
+    <!-- jQuery library -->
+  <script src="files/jquery.min.js"></script>
+  <!-- highlight -->
+  <script src="files/jquery.sticky.js"></script>
+  <!-- Anchorific -->
+  <script src="files/anchorific.min.js"></script>
+  <!-- highlight.js -->
+  <script src="files/highlight.pack.js"></script>
+
+  <!-- CSS -->  
+  <style>
+  @charset "UTF-8";
+  @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin,latin-ext);
+  @import url(http://fonts.googleapis.com/css?family=PT+Mono);
+  @import url(files/chop.css);
+  @import url(files/style.css);
+  @import url(files/vs.css);
+  </style>
+</head>
+<body>
+<h1 class="hide">Begin</h1>
+
+<div class="gototop">Go to top</div>
+
+<!-- CONTAINER -->
+
+<header>
+  <a href="#"></a>
+</header>
+
+<div class="container clearfix">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <nav class="anchorific"></nav>
+  </aside>
+  <!-- /SIDEBAR -->
+
+  <!-- CONTENT -->
+  <div class="content">
+    <!-- SUBHEADER -->
+    <div class="subheader clearfix">
+      <a href="http://themeforest.net/user/Lumberjacks?ref=lumberjacks" class="item-thumbnail-link"><img class="item-thumbnail" src="files/item-thumbnail.png" alt="" title=""></a>
+      <p class="item-name">Campfire</p>
+      <p class="item-type">Minimal Landing Page / App template</p>
+      <p class="item-version">ver. 1.0 @ 06 Jun 2015</p>
+      <p class="button">
+        <a href="http://themeforest.net/user/Lumberjacks?ref=lumberjacks" target="_blank">Live preview</a><a href="http://themeforest.net/user/Lumberjacks?ref=lumberjacks" target="_blank">Purchase theme</a>
+      </p>
+    </div>
+    <!-- /SUBHEADER -->
+
+    <h1>Introduction</h1>
+    <p>Howdy fellow Customer!</p>
+    <p>At first, we would like to thank you for choosing our template. We have prepared an user-friendly documentation especially for you, to help you quickly customize the Campfire template. We hope that work with Campfire won't bring you difficulties and it will be an easy task.</p>
+    <p>We've done our best in making Campfire and hopefully you will love it as much as we do. Your opinion is very important for us and we will appreciate if you can rate and review Campfire on ThemeForest (please check details how you can do it in <a href="#faq">FAQ</a> section).</p>
+    
+    <h1>Installation</h1>
+    <p>After downloading and extracting template package you will find template folders and files.</p>
+    <p>In order to start working with our template, all you have to do is copy chosen template files on your FTP server.</p>   
+    <p>For further template modifications please head to <a href="#customization">Customization</a> section.</p>
+
+    <h1>Files structure</h1>
+    <p>We do our best while making all files for Campfire. Every file (HTML, CSS, JS) that was created by us has clear code, wrapped with comments - all this for your convenience.</p>
+    <p>Template files structure:</p>
+    <ul>
+      <li><strong>css</strong> - CSS styles folder</li>
+      <li><strong>fonts</strong> - webfont icons folder</li>
+      <li><strong>img</strong> - folder for images</li>
+      <li><strong>js</strong> - JavaScript files folder</li>
+      <li><strong>php</strong> - PHP contact script folder</li>
+      <li><strong>twitter</strong> - Twitter script files</li>
+      <li><strong>index.html</strong> - main HTML file</li>
+    </ul>
+
+    <h2>CSS</h2>
+    <p>Main CSS file is <code>style.css</code> which has been divided into 18 sections:</p>
+    <ul>
+      <li><strong>Import section</strong> - place where you include other CSS files (webfonts, your own stylesheets)</li>
+      <li><strong>Basic styles</strong> - basic template styles and classes</li>
+      <li><strong>Header section</strong> - header module</li>
+      <li><strong>Image right section</strong> - product showcase (right) module</li>
+      <li><strong>image left section</strong> - product showcase (left) module</li>
+      <li><strong>button section</strong> - call to action button module</li>
+      <li><strong>Features section #1</strong> - features with icons and texts module #1</li>
+      <li><strong>Features section #2</strong> - features with icons and texts module #2</li>
+      <li><strong>Pricing section</strong> - price plans module</li>
+      <li><strong>Panels section</strong> - carousel list module</li>
+      <li><strong>News section</strong> - news with blog links module</li>
+      <li><strong>Comment section</strong> - comment / quote module with image</li>
+      <li><strong>Info box section</strong> - two column module with button</li>
+      <li><strong>Team section</strong> - team members module</li>
+      <li><strong>Twitter section</strong> - Twitter feed module</li>
+      <li><strong>Contact section</strong> - contact form module</li>
+      <li><strong>Footer section</strong> - footer menu module</li>
+      <li><strong>Breakpoints</strong> - additional media queries for responsive CSS styles</li>
+    </ul>
+
+    <h2>JavaScript</h2>
+    <p>All JavaScripts files are placed in <code>js</code> folder and have to be included at the bottom of the HTML file (before <code>&lt;/body&gt;</code> tag).</p>
+    
+    <p class="warning">Our custom JS file is called <code>lj-campfire.js</code> and must be placed right after all other JS files.</p>
+    <p>In <code>lj-campfire.js</code> includes other scripts calls and our JS functions made for Campfire.</p>
+
+    <h2>Fonts</h2>
+    <p>Campfire uses <a href="https://www.google.com/fonts">Google Webfonts</a>.</p>
+    <p>All these fonts are imported in <code>style.css</code> file in section <code>/* 1. IMPORT SECTION */</code>. Here is an example code:</p>
+    <pre>@import url(&quot;https://fonts.googleapis.com/css?family=Roboto:400,700,300&amp;subset=latin,latin-ext&quot;);
+@import url(&quot;https://fonts.googleapis.com/css?family=Montserrat:400&quot;);</pre>
+    <p class="warning">If you want to import new font from Google Webfont library, don't forget to change property in CSS style: <code>font-family</code> with correct font name.</p>
+    
+    <h1>Customization</h1>
+    <p>Achieving desired look of your website is very easy!</p>
+
+    <h2>General settings</h2>
+
+    <h3>Preloader</h3>
+    <p>Preloader will hide contents of your site until it's fully loaded. To change default loading animation please open <code>img</code> folder and override <code>preloader.svg</code> with your own file (you can use GIF or other image types). If you prefer static image icon over animation preloader, place your image please in <code>img</code> folder, then head over to <code>css</code> folder and edit <code>style.css</code> file. Change image file path accordingly as shown below:</p>
+    <pre>.preloader {
+  background: #fff url('../img/preloader.svg') no-repeat center center;
+  .
+  .
+  .
+}</pre> 
+    <p class="info">By editing <code>background</code> property you can change background color.</p>
+    <p>You can use different preloader SVG images from here: <a href="http://samherbert.net/svg-loaders/">http://samherbert.net/svg-loaders/</a>.</p>
+    <p>In case you want to turn off preloader, please edit <code>index.html</code> and remove code shown below:</p>
+    <pre>&lt;!-- PRELOADER --&gt;
+&lt;div class=&quot;lj-preloader&quot;&gt;&lt;/div&gt;
+&lt;!-- /PRELOADER --&gt;</pre>
+    <p>Then open <code>lj-campfire.js</code> in <code>js</code> folder and remove code shown below:</p>
+    <pre>// preloader
+$(window).load(function() {
+  $(".preloader").delay(250).fadeOut(500);
+});</pre>
+
+
+    <h3>Webfont icons</h3>
+    <p>Campfire uses <a href="http://ionicons.com/">Ionicons</a> as an webfont icon pack.</p>
+    <p>Ionicons files are placed in folders <code>fonts</code> and <code>css</code> (CSS file <code>ionicons.min.css</code>).</p>
+    <p class="info">To properly use Ionicons, add icon's class name to your HTML tag. Example: <code>&lt;i class=&quot;ion-android-checkmark-circle&quot;&gt;&lt;/i&gt;</code>.</p>
+
+
+    <h2>Header section</h2>
+    <img src="files/image-01.jpg" alt="Sample preview of menu" class="imgborder">
+
+    <h3>Background image</h3>    
+    <p>You can set a background image using Backstretch plugin which function is initialized in <code>lj-campfire.js</code>:</p>
+    <pre>// backstretch
+$(&quot;header&quot;).backstretch(&quot;img/header.jpg&quot;);</pre>
+    
+    <p>Simply change background image file <code>header.jpg</code> in <code>img</code> folder.</p>
+
+    <h3>Logo</h3>
+    <p>Logo image must be placed in <code>img</code> folder and named <code>logo.png</code>.</p>
+    <pre>&lt;!-- LOGO --&gt;
+&lt;div class=&quot;col-sm-4 logo&quot;&gt;
+  &lt;img src=&quot;img/logo.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+&lt;!-- /LOGO --&gt;</pre>
+      <p>Default logo image resolution should be 2x bigger than set in CSS:</p>
+      <pre>.logo img {
+  display: block;
+  width: 200px;
+  height: 80px;
+  margin-top: 10px;
+}</pre>
+      <p class="info">Logo image should have resolution <code>400x160</code> pixels. You can change default resolution to desired values.</p>
+      <p> In order to do this you need to edit <code>style.css</code> file in <code>css</code> folder. Look for <code>.logo</code> class as specified below, and change it's <code>width</code> and <code>height</code> values.</p>
+
+    <h3>Menu</h3>
+    <p>Menu in header is used to scroll to selected module from the template. Here is an HTML code:</p>
+    <pre>&lt;!-- MENU --&gt;
+&lt;div class=&quot;col-sm-8 menu&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#explore&quot; class=&quot;scroll&quot;&gt;Explore&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#features&quot; class=&quot;scroll&quot;&gt;Showcase&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#services&quot; class=&quot;scroll&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;separator&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#pricing&quot; class=&quot;bordered scroll&quot;&gt;Plans&amp;nbsp;&amp;amp;&amp;nbsp;Pricing&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- /MENU --&gt;</pre>
+    
+    <p class="info">It uses a <code>href</code> values from links in menu which must be the same as id of the module, for example: pricing plans module has id <code>pricing</code>, so link in menu should be: <code>&lt;a href=&quot;#pricing&quot; class=&quot;bordered scroll&quot;&gt;Plans&amp;nbsp;&amp;amp;&amp;nbsp;Pricing&lt;/a&gt;</code>. There is also <code>scroll</code> class added to each link that have scroll animation functionality.</p>
+
+    <h3>Texts and buttons</h3>
+    <p>You can set main text, paragraph and buttons in header module:</p>
+    <pre>&lt;h1&gt;Powerful yet &lt;strong&gt;simple&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Pixel-perfect. Responsive. Intuitive customizing.&lt;/p&gt;
+&lt;div class=&quot;buttons&quot;&gt;&lt;a href=&quot;#!&quot; class=&quot;solid&quot;&gt;Try for free&lt;/a&gt; or &lt;a href=&quot;#pricing&quot; class=&quot;inline scroll&quot;&gt;purchase now&lt;/a&gt;&lt;/div&gt;</pre>
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 3. HEADER SECTION */</code>.</p>
+
+
+    <h2>Product images section</h2>
+    <img src="files/image-02.jpg" alt="" class="imgborder">
+    <p>In this section you can set titles, paragraphs, buttons and images.</p>
+
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- IMAGE RIGHT SECTION --&gt;</code> and <code>&lt;!-- IMAGE LEFT SECTION --&gt;</code>.</p>
+
+    <p>All images are located in <code>img</code> folder and named: <code>image-1.jpg image-2.jpg</code>.</p>
+    
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 4. IMAGE RIGHT SECTION */</code> and <code>/* 5. IMAGE LEFT SECTION */</code>.</p>
+    
+    <h2>Button section</h2>
+    <img src="files/image-03.jpg" alt="">
+
+    <p>In this section you cen set simple text and call to action in form of a button.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- BUTTON SECTION --&gt;</code>.</p>
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 6. BUTTON SECTION */</code>.</p>
+
+    <h2>Features section</h2>
+    <img src="files/image-04.jpg" alt="">
+    <p>In this section you can place product features with title, paragraph, icons, lists and buttons.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- FEATURES SECTION #1 --&gt;</code> and <code>&lt;!-- FEATURES SECTION #2 --&gt;</code>.</p>
+   
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 7. FEATURES SECTION #1 */</code> and <code>/* 8. FEATURES SECTION #2 */</code>.</p>
+
+    <h2>Pricing table section</h2>
+    <img src="files/image-05.jpg" alt="" class="imgborder">
+    <p>In this section you can put: title, paragrap and button in left column. Other two columns are prepared for pricing plans.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- PRICING SECTION --&gt;</code>.</p>
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 9. PRICING SECTION */</code>.</p>
+
+    <h2>Panels section</h2>
+    <img src="files/image-06.jpg" alt="" class="imgborder">
+    <p>In this section you can put scrollable list of elements you want to emphasise in par with symbol icon.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- PANELS SECTION --&gt;</code>.</p>
+    
+    <p>You can increase or decrease amount of list elements. Each element consists of following code:</p>
+<pre>&lt;div class=&quot;panel&quot;&gt;
+  &lt;i class=&quot;ion-ios-cart-outline&quot;&gt;&lt;/i&gt;
+  &lt;span&gt;Sample title&lt;/span&gt;
+  &lt;p&gt;In the aftermath of the attack, Rick and tShane again argue about the group&rsquo;s future. The fight gets physical and culminates with.&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 10. PANELS SECTION */</code>.</p>
+
+    <h2>News section</h2>
+    <img src="files/image-07.jpg" alt="">
+    <p>In this section you can place your lates blog news as well as link to all blog posts. Each news contains featured image, title, date, text paragraph and link to whole article.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- NEWS SECTION --&gt;</code>.</p>
+   
+   
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 11. NEWS SECTION */</code>.</p>
+
+
+    <h2>Comment section</h2>
+    <img src="files/image-08.jpg" alt="" class="imgborder">
+    <p>In this section you can put featured comment / quote with persons name, title and photo.</p>
+   
+    <p>Image is placed in <code>img</code> folder and named <code>comment.png</code>.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- COMMENT SECTION --&gt;</code>.</p>
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 12. COMMENT SECTION */</code>.</p>
+
+
+    <h2>Info Box section</h2>
+    <img src="files/image-09.jpg" alt="">
+    <p>In this section you have two columns of text and single button.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- INFO BOX SECTION --&gt;</code>.</p>
+    
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 13. INFO BOX SECTION */</code>.</p>
+
+    <h2>Team section</h2>
+    <img src="files/image-10.jpg" alt="" class="imgborder">
+    
+    <p>In this section you can put people responsible for your product along with their names, titles and short decriptions.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- TEAM SECTION --&gt;</code>.</p>
+    
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 14. TEAM SECTION */</code>.</p>
+
+       
+    <h2>Twitter</h2>
+    <img src="files/image-11.jpg" alt="">
+    <p>This section contains Twitter feed with title:</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- TWITTER SECTION --&gt;</code>.</p>
+    
+    <p>Twitter settings can be found in <code>lj-campfire.js</code>:</p>
+    <pre>// Tweetie
+$(&apos;.lj-twitter&apos;).twittie({
+  username: &apos;lumberjacksnews&apos;,
+  count: 3,
+  dateFormat: &apos;%d %b %Y&apos;,
+  hideReplies: true,
+  template: &apos;&lt;p&gt;{{tweet}}&lt;/p&gt;&lt;span&gt;{{date}}&lt;/span&gt;&apos;,
+  apiPath: &apos;twitter/api/tweet.php&apos;
+});</pre>
+    <p class="info">Please remember to change username to your desired Twitter user.</p>
+    <p>New Twitter API requires oAuth Token Key, so it's three step process. First, you need consumer and consumer secret keys. Get them from <a href="https://dev.twitter.com/apps">dev.twitter.com/apps</a>. Edit <code>twitter/api/config.php</code> file and replace variables with your Consumer and oAuth Keys:</p>
+    <pre>// Consumer Key
+define(&#039;CONSUMER_KEY&#039;, &#039;CONSUMER_KEY_HERE&#039;);
+define(&#039;CONSUMER_SECRET&#039;, &#039;CONSUMER_SECRET_HERE&#039;);
+
+// User Access Token
+define(&#039;ACCESS_TOKEN&#039;, &#039;ACCESS_TOKEN_HERE&#039;);
+define(&#039;ACCESS_SECRET&#039;, &#039;ACCESS_SECRET_HERE&#039;);</pre>
+    
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 15. TWITTER SECTION */</code>.</p>
+    
+    <h2>Contact section</h2>
+    <img src="files/image-12.jpg" alt="">
+    <p>You can use AJAX contact form which contains name, e-mail, phone number and message.</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- CONTACT SECTION --&gt;</code>.</p>
+    
+    <p>Validation script is included in our custom JS file <code>lj-campfire.js</code>.</p>
+    
+    <p>In <code>php</code> folder you can find file called <code>send-contact.php</code>. All PHP code for handling form submitting proccess can be put in this file. The variable that you can use in PHP functions is <code>$_POST[&#039;contact_name&#039;]</code> to get a value of entered name, <code>$_POST[&#039;contact_email&#039;]</code> to get entered e-mail, <code>$_POST[&#039;contact_phone&#039;]</code> to get entered phone number and <code>$_POST[&#039;contact_message&#039;]</code> to get message content.</p>
+    <p>For those who are not familiar with PHP programming we've prepared ready-to-use basic example - sending contact form data to your e-mail:</p>
+    <pre>
+// Please put your PHP code here
+//
+// You can use entered name variable as $_POST['contact_name'],
+// e-mail variable as $_POST['contact_email'],
+// phone variable as $_POST['contact_phone'],
+// message variable as $_POST['contact_message']
+
+// Please insert here your email address: 
+$to      = 'PUT_YOUR_EMAIL_ADDRESS_HERE';
+
+$subject = 'Campfire / Message from '.$_POST['contact_name'];
+$message = $_POST['contact_message']. "\r\nE-mail: " .$_POST['contact_email']. "\r\nPhone: " .$_POST['contact_phone'];
+$headers = 'From: '.$_POST['contact_email']. "\r\n" .
+    'Reply-To: '.$_POST['contact_email']. "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+
+</pre>
+    <p class="warning">Please remember to change <code>$to</code> variable to your email address.</p>
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 16. CONTACT SECTION */</code>.</p>
+
+    
+    <h2>Footer</h2>
+    <img src="files/image-13.jpg" alt="" class="imgborder">
+    <p>Here you can put your company logo and little menu with social links:</p>
+    <p>You can find this section in <code>index.html</code> file marked as: <code>&lt;!-- FOOTER SECTION --&gt;</code>.</p>
+    <p>Image logo is located in <code>img</code> folder and named <code>logo-footer.png</code>.</p>
+    <p>Default logo image resolution should be 2x bigger than set in CSS:</p>
+      <pre>footer .image img {
+  width: 130px;
+  height: 52px;
+}</pre>
+    <p class="info">Logo image have resolution <code>260x104</code> pixels. You can change default resolution to desired values.</p>
+    <p> In order to do this you need to edit <code>style.css</code> file in <code>css</code> folder.
+   
+    <p class="info">All CSS styles you can find in <code>style.css</code> in section called <code>/* 17. FOOTER SECTION */</code>.</p>
+
+
+    <h1>Support</h1>
+    <p>We’re truly appreciate that you've chosen our item(s). Customer satisfaction is our priority and we understand that sometimes you need help. We provide friendly and helpful support for all our items.</p>
+    <p>You can reach us using contact form - please follow this <a href="http://themeforest.net/user/Lumberjacks?ref=lumberjacks#contact">link</a>). Support for our customers is provided on business days: <strong>Mon-Fri 10:00am-6:00pm (GMT +1)</strong>. Standard reply time is within 24-48 hours.</p>
+    <p>Don't hesitate to ask, we are here to help you!</p>
+    
+    <h1>FAQ</h1>
+    <p><strong>Q: How can I rate your item?</strong><br>
+      A: Click on <a href="http://themeforest.net/downloads" target="_blank">Downloads</a> tab in your ThemeForest's profile page. There you will be able to rate our item. If you want to rate our item with 4 or less stars, please let us know why you do this. We just want to know about your opinion. This will help us to improve our items in future.</p>
+    <p><strong>Q: Why images included in ThemeForest's .zip file are blurred?</strong><br>
+      A: The answer is really simple. We have no rights to sell them. They're used only for a preview on our demo previews. But don't worry! We have included in credits the URLs to all images/photos/videos in <a href="#credits">Credits</a> section.</p>
+    <p><strong>Q: My JavaScript script doesn't work, why?</strong><br>
+      A: Please check that you've included it properly, check filename in folder and HTML file. Also please make sure that you have properly call it in <code>lj-campfire.js</code> file.</p>
+    <p><strong>Q: How can I change the Favicon?</strong><br>
+      A: In folder <code>img</code> you can find image called <code>favicon.png</code>. All you have to do is to make a new image (we recommend a 32x32 px .png) and replace Campfire's default favicon.</p>
+
+    <h1>Changelog</h1>
+    <p></p>
+    <ul class="changelog">
+      <li><strong>ver. 1.0</strong> (06.06.2015)
+        <ul>
+          <li>initial release</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h1>Credits</h1>
+    <p>CSS, JavaScript files:</p>
+    <ul>
+      <li>Bootstrap <a href="http://getbootstrap.com/">getbootstrap.com</a></li>
+      <li>jQuery library <a href="http://jquery.com/">jquery.com</a></li>
+      <li>Backstretch <a href="http://srobbin.com/jquery-plugins/backstretch/">srobbin.com/jquery-plugins/backstretch/</a></li>
+      <li>HTML5 Shiv <a href="https://code.google.com/p/html5shiv/">code.google.com/p/html5shiv/</a></li>
+      <li>Respond <a href="https://github.com/scottjehl/Respond">github.com/scottjehl/Respond</a></li>
+      <li>slick <a href="http://kenwheeler.github.io/slick/">kenwheeler.github.io/slick/</a></li>
+      <li>jQuery Easing Plugin <a href="http://gsgd.co.uk/sandbox/jquery/easing/">gsgd.co.uk/sandbox/jquery/easing/</a></li>
+      <li>Tweetie <a href="https://github.com/sonnyt/Tweetie">github.com/sonnyt/Tweetie</a></li>
+    </ul>
+    <p>Photos, images, videos:</p>
+    <ul>
+      <li>Photos <a href="http://unsplash.com/">unsplash.com</a></li>
+      <li>App UI kit <a href="http://www.invisionapp.com/do">InVision</a></li>
+    </ul>
+    
+  </div>
+  <!-- /CONTENT -->
+
+</div>
+
+<!-- /CONTAINER -->
+  <script>
+  $('body').anchorific({navigation:'nav',speed:1000,anchorClass:'anchor',anchorText:'',top:false,spy:true,position:'append',spyOffset: 50});$(document).ready(function(){$("nav").sticky({topSpacing:50});});var lastId,topMenu=$("nav"),topMenuHeight=topMenu.outerHeight(),menuItems=topMenu.find("a"),scrollItems=menuItems.map(function(){var item=$($(this).attr("href"));if(item.length){return item;}});menuItems.click(function(e){var href=$(this).attr("href"),offsetTop=href==="#"?0:$(href).offset().top+1;$('html, body').stop().animate({scrollTop:offsetTop},300);e.preventDefault();});
+  // go to top
+  $(window).scroll(function(){if($(document).scrollTop()>175){$(".gototop").fadeIn(500)}else $(".gototop").fadeOut(500)});$(".gototop").click(function(){$("html,body").animate({scrollTop:0},"slow");return false})
+  // highlight.js
+  $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+  hljs.configure({tabReplace: '    '});
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+</html>

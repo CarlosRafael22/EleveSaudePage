@@ -1,0 +1,394 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Eleve Saúde</title>
+    
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="img/favicon.png">
+
+      <!-- Main CSS file -->
+      <link rel="stylesheet" href="css/style_2.css">
+
+      <!-- Main CSS file -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+
+       <!-- jQuery -->
+      <script src="js/vendor/jquery-1.11.3.min.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+      <script src="js/afterglow.min.js"></script>
+
+      <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+      <![endif]-->
+
+      <style type="text/css">
+
+        #header{
+          background-color: black;
+          position: relative;
+        }
+
+       .fullscreen-bg {
+          position: fixed;
+          top: 70px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          /*overflow: hidden;*/
+          /*z-index: -100;*/
+      }
+
+      .fullscreen-bg__video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: auto;
+          height: auto;
+          min-width: 100%;
+          /*max-width: 100%;*/
+          /*max-height: 99%;*/
+          /*max-height: 100%;*/
+          -webkit-transform: translate(-50%, -50%);
+             -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+      }
+
+
+      .img-almost-fluid{
+        max-width: 100%;
+        height: auto;
+      }
+
+      .cant-play {
+          cursor: pointer;
+          display: block;
+          float: right;  
+          z-index: 3;
+          text-align: center;
+          position: absolute; /*newly added*/
+          right: 50px; /*newly added*/
+          top: 25px;/*newly added*/
+      }
+
+     /* .btHover #play-pause{
+        visibility: hidden;
+      }
+
+      .btHover:hover #play-pause{
+        visibility: visible;
+      }
+*/
+      .btHover {
+          width: 640px; /*can be in percentage also.*/
+          height: 25%;
+          margin: 0 auto;
+          padding: 10px;
+          position: relative;
+          top:35%;
+      }
+
+      #play-pause{
+
+        /*margin: 0 auto;
+        position:relative;
+        top: 50%;*/
+
+       /* height:20px;
+        margin: -20px -50px; width:100px; 
+
+        position:relative;
+        margin: 0
+        top:50%; left:50%;*/
+      }
+
+      #centerOut{
+        position: absolute; left: 45%; top:45%;
+      }
+
+      @media (max-width: 500px) {
+         
+          .cant-play{
+            position: absolute; /*newly added*/
+            right: 30px; /*newly added*/
+            top: 15px;/*newly added*/
+          }
+
+          .btHover #play-pause{
+          /*display: none;*/
+          visibility: hidden;
+        }
+
+        .btHover:hover #play-pause{
+          /*display: block;*/
+          visibility: hidden;
+        }
+
+        #centerOut{
+          left: 30%; top:35%;
+        }
+      }
+
+       @media (max-width: 1150px) {
+          
+         .fullscreen-bg {
+            
+            top: 0;
+           
+        }
+      }
+
+      </style>
+
+    </head>
+    <body>
+
+    <!-- PRELOADER -->
+    <div class="preloader"></div>
+    <!-- /PRELOADER -->
+
+    <!-- HEADER SECTION -->
+    <header id="header">
+      <!-- <div class="topbar"> -->
+        <!-- <div class=""> -->
+          <!-- <div class=" wholeScreen"> -->
+
+            <div class="col-sm-4 logo">
+              <img src="img/logo.png" alt="" style="position:absolute; margin-bottom: 40px;z-index: 1;">
+            </div>
+            <button id="cant-play-button" type="button" class="btn btn-primary btn-lg cant-play">Nao consigo assistir</button>
+
+            <div class="fullscreen-bg">
+                <video class="afterglow fullscreen-bg__video" id="myVideo" width="1280" height="600" src="img/video2.mp4" data-autoresize="fit" poster="img/poster.png" data-skin="dark" /></video>
+
+                  <!-- <div id="centerOut" >
+                    <div id="center" style="position: relative; left: -45%; top:-45%;width: 100px; height: 100px;text-align: center;"></div>
+                  </div> -->
+            </div>            
+
+            <script type='text/javascript'>
+                
+                window.onload = function() {
+
+
+
+
+                var video = document.getElementsByClassName("vjs-tech")[0];
+
+                //var button = document.getElementById('finishButton');
+                //var divCenter = document.getElementById("center");
+                var fullscreen = document.getElementsByClassName("fullscreen-bg")[0];
+                var header = document.getElementById("header");
+                var myVideoDiv = document.getElementById("myVideo");
+
+                var buttonCantPlay = document.getElementById("cant-play-button");
+                var playButton = document.getElementById("play-pause");
+                var btHover = document.getElementsByClassName("btHover");
+                
+                video.onended = function() {
+                    //button.remove();
+                    //playButton.remove();
+
+                    console.log("onended");
+
+                    var centerOut = document.createElement("div");
+                    centerOut.style.position = "absolute";
+                    centerOut.style.left = "35%";
+                    centerOut.style.top = "45%";
+
+
+                    var centerIn = document.createElement("div");
+                    centerIn.style.position = "absolute";
+                    // centerIn.style.left = "35%";
+                    // centerIn.style.top = "45%";
+                    // centerIn.style.marginLeft = "-35%";
+                    // centerIn.style.marginTop = "-45%";
+                    // // centerIn.style.width = "500px";
+                    // // centerIn.style.height = "300px";
+                    // centerIn.style.textAlign = "center";
+                    // centerIn.verticalAlign = "middle";
+
+                    if(screen.availWidth < 770){
+                      console.log("770");
+
+                      centerIn.style.left = "50%";
+                      centerIn.style.top = "50%";
+                      // centerIn.style.marginLeft = "-40%";
+                      // centerIn.style.marginTop = "-40%";
+                      centerIn.style.width = "30%";
+                      centerIn.style.height = "10%";
+                      // centerIn.style.width = "80px";
+                      // centerIn.style.height = "80px";
+                      centerIn.style.textAlign = "center";
+                      centerIn.style.verticalAlign = "middle";
+                      // centerIn.style.zIndex = "5";
+                      centerIn.style.margin = "-5% 0 0 -15%";
+                    }else if(screen.availWidth < 1050){
+                      console.log("+770");
+
+                      centerIn.style.left = "50%";
+                      centerIn.style.top = "50%";
+                      // centerIn.style.marginLeft = "-40%";
+                      // centerIn.style.marginTop = "-40%";
+                      centerIn.style.width = "40%";
+                      centerIn.style.height = "20%";
+                      // centerIn.style.width = "80px";
+                      // centerIn.style.height = "80px";
+                      centerIn.style.textAlign = "center";
+                      centerIn.style.verticalAlign = "middle";
+                      // centerIn.style.zIndex = "5";
+                      centerIn.style.margin = "-10% 0 0 -20%";
+                    }else if(screen.availWidth < 1200){
+                       console.log("+1050");
+
+                      centerIn.style.left = "50%";
+                      centerIn.style.top = "50%";
+                      // centerIn.style.marginLeft = "-40%";
+                      // centerIn.style.marginTop = "-40%";
+                      centerIn.style.width = "20%";
+                      centerIn.style.height = "15%";
+                      // centerIn.style.width = "80px";
+                      // centerIn.style.height = "80px";
+                      centerIn.style.textAlign = "center";
+                      centerIn.style.verticalAlign = "middle";
+                      // centerIn.style.zIndex = "5";
+                      centerIn.style.margin = "-7% 0 0 -10%";
+                    }else if(screen.availWidth > 1300){
+                       console.log("+1300");
+
+                      centerIn.style.left = "50%";
+                      centerIn.style.top = "60%";
+                      // centerIn.style.marginLeft = "-40%";
+                      // centerIn.style.marginTop = "-40%";
+                      centerIn.style.width = "20%";
+                      centerIn.style.height = "15%";
+                      // centerIn.style.width = "80px";
+                      // centerIn.style.height = "80px";
+                      centerIn.style.textAlign = "center";
+                      centerIn.style.verticalAlign = "middle";
+                      // centerIn.style.zIndex = "5";
+                      centerIn.style.margin = "-7% 0 0 -10%";
+                    }
+                    
+
+
+
+                    var button = document.createElement("button");
+                    //button.removeAttribute("disabled");
+                    button.setAttribute("class", "btn btn-primary btn-lg");
+                    // button.childNodes[0].nodeValue = "";
+                    button.style.width = "100%";
+                    button.style.height = "100%";
+                    button.style.zIndex = "5";
+
+                    var anchor = document.createElement("a");
+                    anchor.setAttribute("href", "index.html");
+                    //anchor.style.display = "block";
+                    var text = document.createTextNode("Assisti!");
+                    button.appendChild(anchor);
+                    button.appendChild(text);
+
+                    centerIn.appendChild(button);
+                    // centerOut.appendChild(centerIn);
+                    fullscreen.appendChild(centerIn);
+                    buttonCantPlay.style.visibility = "visible";
+                    buttonCantPlay.style.zIndex = "2";
+
+                    
+                    button.onclick = function () {
+                        location.href = "http://www.google.com";
+                    };
+                };
+
+                video.onplay = function(){
+                  //buttonCantPlay.remove();
+                  buttonCantPlay.style.visibility = "hidden";
+                  console.log("onplay");
+                };
+
+
+                // Event listener for the play/pause button
+                // playButton.addEventListener("click", function() {
+                //   if (video.paused == true) {
+                //     // Play the video
+                //     video.play();
+                //     console.log("Hide");
+                //     playButton.style.visibility="hidden";
+
+                //     // Update the button text to 'Pause'
+                //     playButton.innerHTML = "Pause";
+                //   } else {
+                //     // Pause the video
+                //     video.pause();
+                //     console.log("Hide");
+                //     //playButton.hide();
+                //     playButton.style.visibility="hidden";
+
+                //     // Update the button text to 'Play'
+                //     playButton.innerHTML = "Play";
+                //   }
+                // });
+
+                // btHover[0].addEventListener("mouseover", function(){
+                //   //playButton.show();
+                //   console.log("Show");
+                //   playButton.style.visibility="visible";
+                //   // if(playButton.style.visibility == "visible"){
+                //   //   playButton.style.visibility = "hidden";
+                //   // }else{
+                //   //   playButton.style.visibility = "visible";
+                //   // }
+                // });
+
+                // btHover[0].addEventListener("mouseout", function(){
+                //   //playButton.show();
+                //   console.log("Show");
+                //   playButton.style.visibility="hidden";
+                //   // if(playButton.style.visibility == "visible"){
+                //   //   playButton.style.visibility = "hidden";
+                //   // }else{
+                //   //   playButton.style.visibility = "visible";
+                //   // }
+                // });
+
+
+                //  $(document).on('mouseenter', '#center', function () {
+                //     $(this).find("#playButton").show();
+                // }).on('mouseleave', '#center', function () {
+                //     $(this).find("#playButton").hide();
+                // });
+
+              }
+
+            </script>
+
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+
+      
+    </header>
+    <!-- /HEADER SECTION -->
+
+    <!-- /FOOTER SECTION -->
+
+   
+    <!-- jQuery Easing -->
+    <script src="js/vendor/jquery.easing.1.3.js"></script>
+    <!-- Backstretch -->
+    <!-- <script src="js/vendor/jquery.backstretch.min.js"></script> -->
+    <!-- slick -->
+    <script src="js/vendor/slick.min.js"></script>
+    <!-- slick -->
+    <script src="twitter/tweetie.js"></script>
+    <!-- Beard js scripts -->
+    <script src="js/aplicacao_finalizada.js"></script>
+    </body>
+  </html>
