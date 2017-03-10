@@ -100,6 +100,7 @@ $(document).ready(function (){
     ]
   });
 
+
   // Scroll To # Links
   $('a.scroll[href^="#"]').on('click', function(e) {
     e.preventDefault();
@@ -121,4 +122,7 @@ $(document).ready(function (){
 // Change delay and fadeOut speed (in miliseconds)
 $(window).load(function() {
   $(".preloader").delay(250).fadeOut(500);
+
+  
+
 });
